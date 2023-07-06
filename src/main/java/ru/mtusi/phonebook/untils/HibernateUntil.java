@@ -1,4 +1,4 @@
-package untils;
+package ru.mtusi.phonebook.untils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

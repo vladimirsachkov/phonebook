@@ -1,6 +1,8 @@
-import entity.PhonebookTableEntity;
+package ru.mtusi.phonebook;
+
+import ru.mtusi.phonebook.entity.PhonebookTableEntity;
 import org.hibernate.Session;
-import untils.HibernateUntil;
+import ru.mtusi.phonebook.untils.HibernateUntil;
 
 public class Main {
     public static void main(String[] args) {

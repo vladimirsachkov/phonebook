@@ -2,8 +2,8 @@
 <head>
     <title>Телефонный справочник</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/header/logo.png" type="image/x-icon">
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../../img/header/logo.png" type="image/x-icon">
+    <link href="../../styles/styles.css" rel="stylesheet" type="text/css">
 </head>
 <html>
 <body>
@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <h1>Телефонный справочник</h1>
-            <img src="img/header/logo.png">
+            <img src="../../img/header/logo.png">
         </div>
     </header>
 

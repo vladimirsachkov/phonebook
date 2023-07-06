@@ -1,4 +1,4 @@
-package entity;
+package ru.mtusi.phonebook.entity;
 
 import jakarta.persistence.*;
 
