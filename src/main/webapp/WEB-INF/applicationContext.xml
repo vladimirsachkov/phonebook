@@ -12,11 +12,13 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="ru.mtusi.phonebook.conrroller" />
+    <mvc:resources mapping="/resources/**" location="/resources/" />
 
     <mvc:annotation-driven/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="src/main/webapp/WEB-INF/views/"/>
+    <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp" />
     </bean>
 
