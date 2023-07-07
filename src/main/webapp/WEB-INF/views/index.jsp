@@ -28,14 +28,26 @@
                     <th>Должность</th>
                     <th>Телефон</th>
                 </tr>
+                <c:forEach var="phoneBook" items="${AllPhonebookTableEntities}">
+
                 <tr>
-                    <td>Сачков</td>
-                    <td>Владимир</td>
-                    <td>Игоревич</td>
-                    <td>Отдел разработки</td>
-                    <td>Разработчик</td>
-                    <td>+7 499 99 99</td>
+                    <td>${phoneBook.secondName}</td>
+                    <td>${phoneBook.firstName}</td>
+                    <td>${phoneBook.thirdName}</td>
+                    <td>${phoneBook.department}</td>
+                    <td>${phoneBook.postion}</td>
+                    <td>${phoneBook.telNumber}</td>
                 </tr>
+
+                </c:forEach>
+<%--                <tr>--%>
+<%--                    <td>Сачков</td>--%>
+<%--                    <td>Владимир</td>--%>
+<%--                    <td>Игоревич</td>--%>
+<%--                    <td>Отдел разработки</td>--%>
+<%--                    <td>Разработчик</td>--%>
+<%--                    <td>+7 499 99 99</td>--%>
+<%--                </tr>--%>
             </table>
         </div>
     </section>
