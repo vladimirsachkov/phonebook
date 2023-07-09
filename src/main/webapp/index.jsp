@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8" language="java" %>
 <head>
     <title>Телефонный справочник</title>
     <meta charset="UTF-8">
@@ -27,30 +27,17 @@
                     <th>Подразделение</th>
                     <th>Должность</th>
                     <th>Телефон</th>
-                    <th>Действия</th>
+                    <th>Операции</th>
                 </tr>
-                <c:forEach var="phoneBook" items="${AllPhonebookTableEntities}">
-                    <c:url var="phId" value="/updateNumber">
-                        <c:param name="phoneBookId" value="${phoneBook.id}"/>
-                    </c:url>
-                    <tr>
-                        <td>${phoneBook.secondName}</td>
-                        <td>${phoneBook.firstName}</td>
-                        <td>${phoneBook.thirdName}</td>
-                        <td>${phoneBook.department}</td>
-                        <td>${phoneBook.postion}</td>
-                        <td>${phoneBook.telNumber}</td>
-                        <td>
-                            <input type="button" value="Редактировать"
-                            onclick = "window.location.href = '${phId}'">
-                        </td>
-                    </tr>
-                </c:forEach>
+                <tr>
+                    <td>Сачков</td>
+                    <td>Владимир</td>
+                    <td>Игоревич</td>
+                    <td>Отдел разработки</td>
+                    <td>Разработчик</td>
+                    <td>+7 499 99 99</td>
+                </tr>
             </table>
-
-            <div class="table-addrow">
-                <input class="table-add" type="button" value="Добавить номер" onclick="window.location.href = 'addNewNumber'">
-            </div>
         </div>
     </section>
 

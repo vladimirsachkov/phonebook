@@ -1,0 +1,25 @@
+.info {
+  margin-top: 40px;
+}
+
+.info-form {
+  margin-top: 23px;
+}
+
+.info-form-item {
+  margin-top: 10px;
+}
+
+.info-form-item input {
+  margin-top: 7px;
+  height: 27px;
+  width: 270px;
+  font-size: 15px;
+}
+
+.info-form-button {
+  margin-top: 15px;
+  width: 175px;
+  height: 31px;
+}
+/*# sourceMappingURL=phonebook-info.css.map */

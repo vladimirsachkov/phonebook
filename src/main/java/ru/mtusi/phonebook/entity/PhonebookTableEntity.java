@@ -1,6 +1,6 @@
 package ru.mtusi.phonebook.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "phonebook_table", schema = "public", catalog = "phonebook")
