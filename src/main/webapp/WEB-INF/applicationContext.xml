@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="ru.mtusi.phonebook.conrroller" />
+    <context:component-scan base-package="ru.mtusi.phonebook" />
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
     <mvc:annotation-driven/>
@@ -24,7 +24,7 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="org.postgresql.Driver" />
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5433/phonebook?useSSL=false&amp;serverTimezone=UTC?charset=cp1251" />
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5433/phonebook?useSSL=false&amp;serverTimezone=UTC" />
         <property name="user" value="postgres" />
         <property name="password" value="123" />
     </bean>

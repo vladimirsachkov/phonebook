@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8" language="java" %>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,30 +22,31 @@
     <div class="container">
       <h2>${InfoView.h2}</h2>
       <form:form action="saveNumber" modelAttribute="PhonebookTableEntity" class="info-form">
+        <form:hidden path="id"/>
         <div class="info-form-items">
           <div class="info-form-item">
             <p>Имя</p>
-            <form:input required="required" type="text" path="firstName"/>
+            <form:input type="text" path="firstName"/>
           </div>
           <div class="info-form-item">
             <p>Фамилия</p>
-            <form:input required="required" type="text" path="secondName"/>
+            <form:input type="text" path="secondName"/>
           </div>
           <div class="info-form-item">
             <p>Отчество</p>
-            <form:input required="required" type="text" path="thirdName"/>
+            <form:input type="text" path="thirdName"/>
           </div>
           <div class="info-form-item">
             <p>Должность</p>
-            <form:input required="required" type="text" path="postion"/>
+            <form:input type="text" path="postion"/>
           </div>
           <div class="info-form-item">
             <p>Подразделение</p>
-            <form:input required="required" type="text" path="department"/>
+            <form:input type="text" path="department"/>
           </div>
           <div class="info-form-item">
             <p>Телефон</p>
-            <form:input required="required" type="text" path="telNumber"/>
+            <form:input type="text" path="telNumber"/>
           </div>
         </div>
         <input class="info-form-button" type="submit" value="${InfoView.submit}"/>

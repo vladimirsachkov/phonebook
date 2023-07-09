@@ -4,7 +4,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import ru.mtusi.phonebook.entity.PhonebookTableEntity;
 
 import java.util.List;
@@ -15,7 +14,6 @@ public class PhonebookTableDAOImpl implements PhonebookTableDAO {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<PhonebookTableEntity> getAll() {
         Session session = sessionFactory.getCurrentSession();
         List<PhonebookTableEntity> phonebookTableEntities =
@@ -25,9 +23,16 @@ public class PhonebookTableDAOImpl implements PhonebookTableDAO {
     }
 
     @Override
-    @Transactional
     public void savePhonebookTable(PhonebookTableEntity phonebookTableEntity) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(phonebookTableEntity);
+        session.saveOrUpdate(phonebookTableEntity);
+    }
+
+    @Override
+    public PhonebookTableEntity getPhonebookTableEntity(long id) {
+        Session session = sessionFactory.getCurrentSession();
+
+        PhonebookTableEntity phonebookTableEntity = session.get(PhonebookTableEntity.class, id);
+        return phonebookTableEntity;
     }
 }

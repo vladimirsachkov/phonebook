@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8" language="java" %>
 <head>
     <title>Телефонный справочник</title>
     <meta charset="UTF-8">
@@ -27,6 +27,7 @@
                     <th>Подразделение</th>
                     <th>Должность</th>
                     <th>Телефон</th>
+                    <th>Операции</th>
                 </tr>
                 <tr>
                     <td>Сачков</td>

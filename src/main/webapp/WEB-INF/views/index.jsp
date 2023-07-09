@@ -27,18 +27,24 @@
                     <th>Подразделение</th>
                     <th>Должность</th>
                     <th>Телефон</th>
+                    <th>Действия</th>
                 </tr>
                 <c:forEach var="phoneBook" items="${AllPhonebookTableEntities}">
-
-                <tr>
-                    <td>${phoneBook.secondName}</td>
-                    <td>${phoneBook.firstName}</td>
-                    <td>${phoneBook.thirdName}</td>
-                    <td>${phoneBook.department}</td>
-                    <td>${phoneBook.postion}</td>
-                    <td>${phoneBook.telNumber}</td>
-                </tr>
-
+                    <c:url var="phId" value="/updateNumber">
+                        <c:param name="phoneBookId" value="${phoneBook.id}"/>
+                    </c:url>
+                    <tr>
+                        <td>${phoneBook.secondName}</td>
+                        <td>${phoneBook.firstName}</td>
+                        <td>${phoneBook.thirdName}</td>
+                        <td>${phoneBook.department}</td>
+                        <td>${phoneBook.postion}</td>
+                        <td>${phoneBook.telNumber}</td>
+                        <td>
+                            <input type="button" value="Редактировать"
+                            onclick = "window.location.href = '${phId}'">
+                        </td>
+                    </tr>
                 </c:forEach>
             </table>
 
