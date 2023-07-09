@@ -30,7 +30,10 @@
                     <th>Действия</th>
                 </tr>
                 <c:forEach var="phoneBook" items="${AllPhonebookTableEntities}">
-                    <c:url var="phId" value="/updateNumber">
+                    <c:url var="updateButton" value="/updateNumber">
+                        <c:param name="phoneBookId" value="${phoneBook.id}"/>
+                    </c:url>
+                    <c:url var="deleteButton" value="/deleteNumber">
                         <c:param name="phoneBookId" value="${phoneBook.id}"/>
                     </c:url>
                     <tr>
@@ -42,7 +45,9 @@
                         <td>${phoneBook.telNumber}</td>
                         <td>
                             <input type="button" value="Редактировать"
-                            onclick = "window.location.href = '${phId}'">
+                                   onclick = "window.location.href = '${updateButton}'">
+                            <input type="button" value="Удалить"
+                                   onclick = "window.location.href = '${deleteButton}'">
                         </td>
                     </tr>
                 </c:forEach>
