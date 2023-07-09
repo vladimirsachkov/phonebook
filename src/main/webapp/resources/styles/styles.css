@@ -82,6 +82,21 @@ header .container img {
     border: 2px solid gray;
 }
 
+.table-addrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.table-add {
+    margin-top: 25px;
+    height: 29px;
+    width: 260px;
+}
+
 footer {
     background: #ddd;
     height: 70px;
@@ -91,3 +106,4 @@ footer {
 footer .author {
     margin-top: 34px;
 }
+/*# sourceMappingURL=style.css.map */

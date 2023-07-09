@@ -7,4 +7,5 @@ import java.util.List;
 public interface PhonebookTableDAO {
 
     public List<PhonebookTableEntity> getAll();
+    public void savePhonebookTable(PhonebookTableEntity phonebookTableEntity);
 }

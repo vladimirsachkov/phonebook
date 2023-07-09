@@ -23,4 +23,11 @@ public class PhonebookTableDAOImpl implements PhonebookTableDAO {
         System.out.println(phonebookTableEntities);
         return phonebookTableEntities;
     }
+
+    @Override
+    @Transactional
+    public void savePhonebookTable(PhonebookTableEntity phonebookTableEntity) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(phonebookTableEntity);
+    }
 }

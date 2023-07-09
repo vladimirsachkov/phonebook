@@ -40,15 +40,11 @@
                 </tr>
 
                 </c:forEach>
-<%--                <tr>--%>
-<%--                    <td>Сачков</td>--%>
-<%--                    <td>Владимир</td>--%>
-<%--                    <td>Игоревич</td>--%>
-<%--                    <td>Отдел разработки</td>--%>
-<%--                    <td>Разработчик</td>--%>
-<%--                    <td>+7 499 99 99</td>--%>
-<%--                </tr>--%>
             </table>
+
+            <div class="table-addrow">
+                <input class="table-add" type="button" value="Добавить номер" onclick="window.location.href = 'addNewNumber'">
+            </div>
         </div>
     </section>
 
