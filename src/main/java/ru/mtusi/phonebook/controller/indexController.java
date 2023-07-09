@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 @ComponentScan("ru.mtusi.phonebook.service")
-public class index {
+public class indexController {
 
     @Autowired
     private PhonebookTableService phonebookTableService;
@@ -24,7 +24,7 @@ public class index {
     public String mainPage(Model model){
         List<PhonebookTableEntity> phonebookTableEntities = phonebookTableService.getAll();
         model.addAttribute("AllPhonebookTableEntities", phonebookTableEntities);
-        return "index";
+        return "phonebook";
     }
 
     @RequestMapping("/addNewNumber")
