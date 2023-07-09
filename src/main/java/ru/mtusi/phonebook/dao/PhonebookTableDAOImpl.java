@@ -2,6 +2,7 @@ package ru.mtusi.phonebook.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.mtusi.phonebook.entity.PhonebookTableEntity;
@@ -34,5 +35,15 @@ public class PhonebookTableDAOImpl implements PhonebookTableDAO {
 
         PhonebookTableEntity phonebookTableEntity = session.get(PhonebookTableEntity.class, id);
         return phonebookTableEntity;
+    }
+
+    @Override
+    public void deletePhonebookTableEntity(long id) {
+        Session session = sessionFactory.getCurrentSession();
+
+        Query<PhonebookTableEntity> query = session.createQuery("delete from " +
+                "PhonebookTableEntity where id = :PhonebookTableEntityId");
+        query.setParameter("PhonebookTableEntityId", id);
+        query.executeUpdate();
     }
 }

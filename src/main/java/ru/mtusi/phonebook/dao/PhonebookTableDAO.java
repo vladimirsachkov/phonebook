@@ -10,4 +10,6 @@ public interface PhonebookTableDAO {
     public void savePhonebookTable(PhonebookTableEntity phonebookTableEntity);
 
     PhonebookTableEntity getPhonebookTableEntity(long id);
+
+    public void deletePhonebookTableEntity(long id);
 }

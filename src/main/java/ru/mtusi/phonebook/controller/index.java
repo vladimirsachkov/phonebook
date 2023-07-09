@@ -54,4 +54,10 @@ public class index {
 
         return "phonebook-info";
     }
+
+    @RequestMapping("/deleteNumber")
+    public String deleteEmployee(@RequestParam("phoneBookId") long id) {
+        phonebookTableService.deletePhonebookTableEntity(id);
+        return "redirect:/PhonebookTable";
+    }
 }

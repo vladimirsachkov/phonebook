@@ -10,4 +10,6 @@ public interface PhonebookTableService {
     public void savePhonebookTable(PhonebookTableEntity phonebookTableEntity);
 
     public PhonebookTableEntity getPhonebookTableEntity(long id);
+
+    public void deletePhonebookTableEntity(long id);
 }

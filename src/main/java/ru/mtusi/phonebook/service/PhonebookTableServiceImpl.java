@@ -33,4 +33,10 @@ public class PhonebookTableServiceImpl implements PhonebookTableService {
     public PhonebookTableEntity getPhonebookTableEntity(long id) {
         return phonebookTableDAO.getPhonebookTableEntity(id);
     }
+
+    @Override
+    @Transactional
+    public void deletePhonebookTableEntity(long id) {
+        phonebookTableDAO.deletePhonebookTableEntity(id);
+    }
 }
